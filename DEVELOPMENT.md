@@ -29,6 +29,8 @@ This is guide how to prepare development environment and use main tools
     sudo apt-get install build-essential
     ```
 
+    
+
 1. Install python 3.8
     - Windows
 
@@ -55,6 +57,13 @@ This is guide how to prepare development environment and use main tools
     ```bash
     make poetry-download
     ```
+
+1.  Attention
+
+    For the correct work of the programme it is necessary to write and in the .env file
+    - DB_DPATH="*path to the folder with the database*"
+    - bot_token="*token of your bot*"
+
 
 [Table of contents](#table-of-contents)
 
