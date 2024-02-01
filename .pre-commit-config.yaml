@@ -1,6 +1,3 @@
-default_language_version:
-  python: python3.8
-
 default_stages: [commit, push]
 
 repos:
@@ -35,14 +32,7 @@ repos:
         types: [python]
         language: system
 
-      - id: git-commit-prefix
-        name: git-commit-prefix
-        entry: poetry run python .additional/github_commit_prefix.py
-        language: python
-        stages: [prepare-commit-msg]
-        description: Searches the branch name for something looking like an issue name template and prepends the commit message with it
-
-  - repo: https://gitlab.com/pycqa/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
       - id: flake8

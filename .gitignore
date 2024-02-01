@@ -234,6 +234,7 @@ dmypy.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode/launch.json
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
@@ -613,8 +614,11 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+.env
 
 # End of https://www.gitignore.io/api/osx,python,pycharm,windows,visualstudio,visualstudiocode
 
-# Ignore data directory
-/data
+*.db
+
+# Hydra artifacts
+outputs/

@@ -1,0 +1,23 @@
+params:
+  random_seed:  42
+  # the penalty factor for a hard-constraint violation
+  hard_constraint_penalty: 10
+  population_size: 200
+  hall_of_fame_size: 5
+  # probability for crossover
+  p_crossover: 0.9
+  # probability for mutating an individual
+  p_mutation: 0.1
+  max_generations: 100
+  max_colors: 24
+
+paths:
+  data_dpath: ${hydra:runtime.cwd}/data
+  graph_dpath: ${paths.data_dpath}/graph
+  output_dpath: ${paths.data_dpath}/timetable_${date_now:}
+
+files:
+  odd_graph: 1week.pickle
+  odd_graph_nodes: 1week_node.json
+  even_graph: 2week.pickle
+  even_graph_nodes: 2week_node.json
